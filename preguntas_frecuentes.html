@@ -156,47 +156,38 @@
   </head>
   <body class="text-on-surface">
     <!-- TopNavBar -->
-    <header
-      class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 max-w-[1440px] mx-auto bg-surface dark:bg-inverse-surface shadow-sm dark:shadow-none transition-all duration-300"
-      id="top-nav"
+        <header
+      class="fixed top-0 left-0 w-full z-50 bg-surface dark:bg-inverse-surface shadow-sm h-20 flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto"
     >
-      <div
+      <a
         class="text-headline-lg font-headline-lg font-bold text-on-surface dark:text-inverse-on-surface"
+        href="index.html"
+        >Va!</a
       >
-        Va!
-      </div>
-      <nav class="hidden md:flex gap-xl items-center">
-        <a
-          class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors text-label-md font-label-md"
-          href="#"
-          >How it Works</a
-        >
-        <a
-          class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors text-label-md font-label-md"
-          href="#"
-          >For Merchants</a
-        >
-        <a
-          class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors text-label-md font-label-md"
-          href="#"
-          >For Couriers</a
-        >
-        <a
-          class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 text-label-md font-label-md"
-          href="#"
-          >FAQ</a
-        >
-        <a
-          class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors text-label-md font-label-md"
-          href="#"
-          >Contact</a
-        >
+      <nav class="hidden md:flex items-center gap-xl">
+        <a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="como_funciona.html">Cómo funciona</a>
+        <a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="comercios.html">Comercios</a>
+        <a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="cadeteria.html">Cadetería</a>
+        <a class="text-label-md font-label-md border-b-2 border-primary text-primary" href="preguntas_frecuentes.html">Preguntas frecuentes</a>
+        <a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="contacto.html">Contacto</a>
       </nav>
-      <button
-        class="bg-primary-container text-on-primary-container px-lg py-sm rounded-xl font-label-md text-label-md active:scale-95 duration-150 ease-in-out"
-      >
-        Order Now
-      </button>
+      <div class="flex items-center gap-sm md:gap-md">
+        <a
+          class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors px-md py-sm rounded-lg"
+          href="comercios.html"
+          >Ingresar — Comercios</a
+        >
+        <a
+          class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors px-md py-sm rounded-lg"
+          href="cadeteria.html"
+          >Ingresar — Cadetería</a
+        >
+        <a
+          class="bg-primary-container text-on-primary-container px-lg py-sm rounded-xl font-label-md text-label-md"
+          href="index.html"
+          >Descargar Va!</a
+        >
+      </div>
     </header>
     <main
       class="pt-32 pb-xl px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto"
