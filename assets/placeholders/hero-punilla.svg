@@ -1,0 +1,14 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E9FBC7"/>
+      <stop offset="1" stop-color="#D9F99D"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <circle cx="930" cy="180" r="100" fill="#84CC16" fill-opacity="0.35"/>
+  <path d="M0 640C170 590 330 630 470 700C620 775 780 790 940 715C1040 668 1120 640 1200 650V900H0V640Z" fill="#4D7C0F" fill-opacity="0.25"/>
+  <path d="M0 700C150 660 270 690 410 740C570 800 730 820 920 770C1050 735 1140 700 1200 710V900H0V700Z" fill="#3F6212" fill-opacity="0.25"/>
+  <text x="80" y="168" fill="#1F2937" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700">Valle de Punilla</text>
+  <text x="80" y="220" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="28">Placeholder local para hero de Va!</text>
+</svg>
