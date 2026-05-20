@@ -9,120 +9,73 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <style>
-      body{font-family:Inter,sans-serif;background:#fff;color:#101826}
-      .title{font-family:"Barlow Condensed",sans-serif}
-      .va-accent{color:#c6d93b}.va-bg{background:#c6d93b}
-      .container-va{max-width:1140px}
-      .glass{background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border:1px solid #edf0e4}
-      .soft{box-shadow:0 18px 36px rgba(16,24,38,.12)}
-      .dot{width:8px;height:8px;border-radius:999px;background:#c6d93b;position:absolute}
+      :root { color-scheme: light; }
+      body { font-family: Inter, sans-serif; background: #f5f7ef; color: #152019; }
+      .title { font-family: "Barlow Condensed", sans-serif; }
+      .glass { background: rgba(255,255,255,.8); backdrop-filter: blur(10px); }
+      .va-shadow { box-shadow: 0 20px 45px rgba(21,32,25,.14); }
+      .hover-float { transition: transform .28s ease, box-shadow .28s ease; }
+      .hover-float:hover { transform: translateY(-5px); box-shadow: 0 24px 50px rgba(21,32,25,.2); }
+      .btn-main { transition: all .25s ease; }
+      .btn-main:hover { transform: translateY(-2px); }
     </style>
   </head>
   <body>
-    <div class="relative overflow-hidden">
-      <span class="dot top-[220px] left-[16%]"></span><span class="dot top-[520px] right-[18%]"></span><span class="dot top-[960px] left-[22%]"></span>
+    <header class="fixed top-0 inset-x-0 z-50">
+      <div class="mx-auto max-w-[1240px] mt-4 px-4">
+        <div class="glass va-shadow rounded-2xl px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
+          <a href="index.html" class="shrink-0"><img src="assets/brand/logo-va.svg" alt="Logo Va!" class="h-11 w-auto" /></a>
+          <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-700">
+            <a href="como_funciona.html" class="hover:text-lime-700">Cómo funciona</a>
+            <a href="comercios.html" class="hover:text-lime-700">Comercios</a>
+            <a href="cadeteria.html" class="hover:text-lime-700">Cadetería</a>
+            <a href="clientes.html" class="hover:text-lime-700">Clientes</a>
+            <a href="preguntas_frecuentes.html" class="hover:text-lime-700">Preguntas frecuentes</a>
+            <a href="contacto.html" class="hover:text-lime-700">Contacto</a>
+          </nav>
+          <a href="contacto.html" class="btn-main bg-lime-400 px-4 sm:px-5 py-2 rounded-full font-semibold whitespace-nowrap hover:bg-lime-300">¿Lo pedís? Va!</a>
+        </div>
+      </div>
+    </header>
 
-      <header class="fixed top-0 inset-x-0 z-50">
-        <div class="mx-auto container-va px-4 mt-4">
-          <div class="glass rounded-2xl px-6 py-4 flex items-center justify-between soft">
-            <a href="index.html"><img src="assets/brand/logo-va.svg" alt="Logo Va!" class="h-11 w-auto" /></a>
-            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-700">
-              <a href="como_funciona.html" class="hover:text-[#9DB307]">Cómo funciona</a>
-              <a href="comercios.html" class="hover:text-[#9DB307]">Comercios</a>
-              <a href="cadeteria.html" class="hover:text-[#9DB307]">Cadetería</a>
-              <a href="clientes.html" class="hover:text-[#9DB307]">Clientes</a>
-              <a href="preguntas_frecuentes.html" class="hover:text-[#9DB307]">Preguntas frecuentes</a>
-              <a href="contacto.html" class="hover:text-[#9DB307]">Contacto</a>
-            </nav>
-            <a href="contacto.html" class="va-bg px-5 py-2 rounded-full font-semibold hover:brightness-95 transition">¿Lo pedís? Va!</a>
+    <main class="pt-32 pb-16">
+      <section class="mx-auto max-w-[1240px] px-4 grid lg:grid-cols-2 gap-8 items-center min-h-[74vh]">
+        <div>
+          <p class="uppercase tracking-[.24em] text-sm text-lime-700 font-semibold mb-4">De Punilla, para Punilla</p>
+          <h1 class="title text-5xl sm:text-6xl lg:text-7xl leading-[.92] font-bold mb-6">Pedí en tu valle.<br><span class="text-lime-700">Recibilo con Va!</span></h1>
+          <p class="text-lg text-slate-700 mb-8 max-w-xl">Conectamos comercios, clientes y cadetes en todo el Valle de Punilla con una experiencia rápida, cercana y local.</p>
+          <div class="flex flex-wrap gap-4"><a href="clientes.html" class="btn-main bg-slate-900 text-white px-7 py-3 rounded-full font-semibold hover:bg-slate-700">Soy cliente</a><a href="comercios.html" class="btn-main border border-slate-300 px-7 py-3 rounded-full font-semibold hover:bg-white">Tengo comercio</a></div>
+        </div>
+        <div class="relative">
+          <img src="assets/placeholders/hero-punilla.svg" alt="Paisaje del Valle de Punilla de referencia para hero de Va!" class="w-full h-[580px] sm:h-[640px] object-cover rounded-[2rem] va-shadow"/>
+          <div class="absolute bottom-6 left-6 glass rounded-2xl px-5 py-4">
+            <p class="title text-3xl font-bold">¿Lo pedís? Va!</p>
+            <p class="text-sm text-slate-700">Diseño desktop-first inspirado en la referencia visual.</p>
           </div>
         </div>
-      </header>
+      </section>
+      <section class="mx-auto max-w-[1240px] px-4 mt-12 grid md:grid-cols-3 gap-6">
+        <article class="bg-white rounded-3xl p-7 va-shadow hover-float"><h3 class="title text-3xl mb-2">Comercios</h3><p>Sumá ventas y llegá más lejos en tu zona.</p></article>
+        <article class="bg-white rounded-3xl p-7 va-shadow hover-float"><h3 class="title text-3xl mb-2">Cadetería</h3><p>Flexibilidad para trabajar en tu propio ritmo.</p></article>
+        <article class="bg-white rounded-3xl p-7 va-shadow hover-float"><h3 class="title text-3xl mb-2">Clientes</h3><p>Todo lo que necesitás, desde tu barrio y al instante.</p></article>
+      </section>
 
-      <main class="pt-32 pb-16">
-        <section class="mx-auto container-va px-4 grid lg:grid-cols-[1.05fr_.95fr] gap-10 items-center min-h-[78vh]">
-          <div>
-            <span class="inline-flex rounded-full bg-black text-[#C6D93B] px-4 py-2 text-xs font-semibold mb-6">De Punilla para Punilla</span>
-            <h1 class="text-5xl sm:text-6xl leading-[1.02] font-extrabold max-w-xl">Tu delivery local: pedí rápido con <span class="title va-accent text-6xl sm:text-7xl">Va!</span></h1>
-            <p class="mt-6 text-slate-600 max-w-md">Conectamos comercios, clientes y cadetes del Valle de Punilla con una experiencia veloz y cercana.</p>
-            <div class="mt-8 flex flex-wrap items-center gap-4">
-              <a href="clientes.html" class="va-bg px-8 py-3 rounded-full font-semibold">Empezar</a>
-              <a href="como_funciona.html" class="inline-flex items-center gap-2 text-sm font-semibold"><span class="w-8 h-8 rounded-full bg-slate-200 grid place-items-center">▶</span>Cómo funciona</a>
-            </div>
-          </div>
-          <div class="relative">
-            <img src="assets/hero/hero-va-punilla.svg" alt="Cadete Va! en el Valle de Punilla" class="w-full h-[620px] object-cover rounded-[2rem] soft" />
-            <article class="absolute -bottom-5 left-6 right-6 glass rounded-2xl p-4 flex items-center justify-between">
-              <div>
-                <p class="font-semibold">Cadete Va! en camino</p>
-                <p class="text-sm text-slate-500">Entrega local • 20-30 min</p>
-              </div>
-              <span class="va-bg px-3 py-1 rounded-full text-sm font-semibold">4.9 ★</span>
-            </article>
-          </div>
-        </section>
+    </main>
 
-        <section class="mx-auto container-va px-4 pt-16">
-          <p class="uppercase tracking-[.24em] text-xs text-[#9DB307] font-semibold text-center">Qué ofrecemos</p>
-          <h2 class="mt-3 text-center text-4xl font-extrabold">Tu socio favorito de delivery</h2>
-          <div class="mt-10 grid md:grid-cols-3 gap-6">
-            <article class="rounded-3xl border border-slate-100 p-7 text-center hover:shadow-xl transition"><h3 class="title text-4xl">Pedí fácil</h3><p class="mt-2 text-slate-600">Comprá en pocos pasos desde tu zona.</p></article>
-            <article class="rounded-3xl border border-slate-100 p-7 text-center hover:shadow-xl transition"><h3 class="title text-4xl">Entrega rápida</h3><p class="mt-2 text-slate-600">Logística optimizada en el valle.</p></article>
-            <article class="rounded-3xl border border-slate-100 p-7 text-center hover:shadow-xl transition"><h3 class="title text-4xl">Comunidad local</h3><p class="mt-2 text-slate-600">Impulsamos comercios de Punilla.</p></article>
-          </div>
-        </section>
-
-        <section class="mx-auto container-va px-4 pt-16 grid lg:grid-cols-[280px_1fr] gap-8 items-start">
-          <div>
-            <p class="uppercase tracking-[.24em] text-xs text-[#9DB307] font-semibold">Categorías</p>
-            <h2 class="mt-3 text-4xl font-extrabold">Lo más pedido</h2>
-            <ul class="mt-8 space-y-4 text-sm font-medium">
-              <li class="va-bg rounded-full px-4 py-3 inline-flex">Pizza</li>
-              <li>Burger</li><li>Cupcake</li><li>Ramen</li><li>Helado</li>
-            </ul>
-          </div>
-          <div class="grid sm:grid-cols-2 gap-6">
-            <article class="relative rounded-3xl overflow-hidden soft"><img src="assets/hero/hero-va-punilla.svg" alt="Producto destacado Va!" class="h-72 w-full object-cover"/><div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black/70 to-transparent text-white"><p class="text-2xl font-bold">Promo Local</p><p class="text-lg va-accent font-semibold">$7.490</p></div></article>
-            <article class="relative rounded-3xl overflow-hidden soft"><img src="assets/hero/hero-va-punilla.svg" alt="Producto destacado Va!" class="h-72 w-full object-cover"/><div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black/70 to-transparent text-white"><p class="text-2xl font-bold">Combo Punilla</p><p class="text-lg va-accent font-semibold">$6.590</p></div></article>
-          </div>
-        </section>
-
-        <section class="mx-auto container-va px-4 pt-16 grid lg:grid-cols-2 gap-10 items-center">
-          <img src="assets/hero/hero-va-punilla.svg" alt="Cliente satisfecha usando Va!" class="w-full h-[380px] object-cover rounded-3xl soft"/>
-          <div>
-            <p class="uppercase tracking-[.24em] text-xs text-[#9DB307] font-semibold">Testimonios</p>
-            <h2 class="mt-3 text-5xl font-extrabold leading-tight">Lo que dicen nuestros clientes</h2>
-            <p class="mt-5 text-slate-600">“El servicio es muy bueno, rápido y cercano. Ideal para pedir en todo el Valle de Punilla.”</p>
-            <p class="mt-6 font-semibold">Theresa Jordan • Food Enthusiast</p>
-          </div>
-        </section>
-
-        <section class="mx-auto container-va px-4 pt-16">
-          <div class="rounded-[2rem] bg-[#fff5ea] p-10 grid lg:grid-cols-2 gap-8 items-center">
+    <footer class="mt-6 pb-10">
+      <div class="mx-auto max-w-[1240px] px-4">
+        <div class="bg-slate-900 text-slate-200 rounded-3xl p-8 md:p-10">
+          <div class="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <p class="uppercase tracking-[.24em] text-xs text-[#9DB307] font-semibold">Descargá la app</p>
-              <h2 class="mt-3 text-5xl font-extrabold">Get Started With Va! Today!</h2>
-              <p class="mt-4 text-slate-600 max-w-md">Descubrí comercios y recibí tus pedidos cuando quieras.</p>
-              <a href="contacto.html" class="inline-block mt-7 va-bg px-7 py-3 rounded-full font-semibold">Get The App</a>
+              <p class="title text-5xl text-lime-300">Va!</p>
+              <p class="mt-3 text-slate-300 max-w-xl">Delivery local del Valle de Punilla para clientes, comercios y cadetes.</p>
             </div>
-            <div class="rounded-3xl bg-white p-6 soft">
-              <p class="font-semibold">Inicio app Va!</p>
-              <div class="mt-4 grid grid-cols-3 gap-3 text-xs"><span class="rounded-full bg-[#C6D93B] px-3 py-1 text-center">Comida</span><span class="rounded-full bg-slate-100 px-3 py-1 text-center">Pizza</span><span class="rounded-full bg-slate-100 px-3 py-1 text-center">Cupcake</span></div>
+            <div class="flex flex-wrap gap-x-5 gap-y-3 text-sm">
+              <a href="index.html" class="hover:text-lime-300">Inicio</a><a href="como_funciona.html" class="hover:text-lime-300">Cómo funciona</a><a href="comercios.html" class="hover:text-lime-300">Comercios</a><a href="cadeteria.html" class="hover:text-lime-300">Cadetería</a><a href="clientes.html" class="hover:text-lime-300">Clientes</a><a href="preguntas_frecuentes.html" class="hover:text-lime-300">FAQ</a><a href="contacto.html" class="hover:text-lime-300">Contacto</a>
             </div>
-          </div>
-        </section>
-      </main>
-
-      <footer class="pb-10 pt-14">
-        <div class="mx-auto container-va px-4">
-          <div class="grid lg:grid-cols-5 gap-8 text-sm">
-            <div class="lg:col-span-2"><img src="assets/brand/logo-va.svg" alt="Logo Va!" class="h-11" /><p class="mt-4 text-slate-600 max-w-sm">Delivery local en el Valle de Punilla para clientes, comercios y cadetería.</p></div>
-            <div><p class="font-semibold mb-3">Navegación</p><ul class="space-y-2 text-slate-600"><li><a href="index.html">Inicio</a></li><li><a href="como_funciona.html">Cómo funciona</a></li><li><a href="comercios.html">Comercios</a></li></ul></div>
-            <div><p class="font-semibold mb-3">Comunidad</p><ul class="space-y-2 text-slate-600"><li><a href="cadeteria.html">Cadetería</a></li><li><a href="clientes.html">Clientes</a></li><li><a href="preguntas_frecuentes.html">FAQ</a></li></ul></div>
-            <div><p class="font-semibold mb-3">Contacto</p><ul class="space-y-2 text-slate-600"><li><a href="contacto.html">Contacto</a></li><li>Valle de Punilla</li></ul></div>
           </div>
         </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
   </body>
 </html>
