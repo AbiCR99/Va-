@@ -9,57 +9,73 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <style>
-      body{font-family:Inter,sans-serif;background:#f7f8f2;color:#152019}
-      .title{font-family:"Barlow Condensed",sans-serif}
-      .glass{background:rgba(255,255,255,.76);backdrop-filter:blur(10px)}
-      .va-shadow{box-shadow:0 20px 40px rgba(21,32,25,.14)}
-      .hover-float{transition:all .28s ease}
-      .hover-float:hover{transform:translateY(-5px)}
+      :root { color-scheme: light; }
+      body { font-family: Inter, sans-serif; background: #ffffff; color: #152019; }
+      .title { font-family: "Barlow Condensed", sans-serif; }
+      .glass { background: rgba(255,255,255,.94); backdrop-filter: blur(8px); border:1px solid #eef0e8; }
+      .va-shadow { box-shadow: 0 16px 35px rgba(17,17,17,.12); }
+      .hover-float { transition: transform .28s ease, box-shadow .28s ease; }
+      .hover-float:hover { transform: translateY(-5px); box-shadow: 0 24px 50px rgba(21,32,25,.2); }
+      .btn-main { transition: all .25s ease; }
+      .btn-main:hover { transform: translateY(-2px); }
     </style>
   </head>
   <body>
     <header class="fixed top-0 inset-x-0 z-50">
       <div class="mx-auto max-w-[1240px] mt-4 px-4">
-        <div class="glass va-shadow rounded-2xl px-6 py-4 flex items-center justify-between">
-          <a href="index.html" class="title text-4xl font-bold">Va!</a>
-          <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
-            <a href="como_funciona.html" class="hover:text-lime-700">Cómo funciona</a>
-            <a href="comercios.html" class="hover:text-lime-700">Comercios</a>
-            <a href="cadeteria.html" class="hover:text-lime-700">Cadetería</a>
-            <a href="clientes.html" class="hover:text-lime-700">Clientes</a>
-            <a href="preguntas_frecuentes.html" class="hover:text-lime-700">Preguntas frecuentes</a>
-            <a href="contacto.html" class="hover:text-lime-700">Contacto</a>
+        <div class="glass va-shadow rounded-2xl px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
+          <a href="index.html" class="shrink-0"><img src="assets/brand/logo-va.svg" alt="Logo Va!" class="h-11 w-auto" /></a>
+          <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-700">
+            <a href="como_funciona.html" class="hover:text-[#9DB307]">Cómo funciona</a>
+            <a href="comercios.html" class="hover:text-[#9DB307]">Comercios</a>
+            <a href="cadeteria.html" class="hover:text-[#9DB307]">Cadetería</a>
+            <a href="clientes.html" class="hover:text-[#9DB307]">Clientes</a>
+            <a href="preguntas_frecuentes.html" class="hover:text-[#9DB307]">Preguntas frecuentes</a>
+            <a href="contacto.html" class="hover:text-[#9DB307]">Contacto</a>
           </nav>
-          <a href="contacto.html" class="bg-lime-400 px-5 py-2 rounded-full font-semibold hover:bg-lime-300 transition">¿Lo pedís? Va!</a>
+          <a href="contacto.html" class="btn-main bg-[#C6D93B] px-4 sm:px-5 py-2 rounded-full font-semibold whitespace-nowrap hover:bg-lime-300">¿Lo pedís? Va!</a>
         </div>
       </div>
     </header>
 
-    <main class="pt-28 pb-16">
-      <section class="mx-auto max-w-[1240px] px-4 grid lg:grid-cols-2 gap-8 items-center min-h-[78vh]">
+    <main class="pt-32 pb-16">
+      <section class="mx-auto max-w-[1240px] px-4 grid lg:grid-cols-2 gap-8 items-center min-h-[74vh]">
         <div>
-          <p class="uppercase tracking-[.24em] text-sm text-lime-700 font-semibold mb-4">De Punilla, para Punilla</p>
-          <h1 class="title text-6xl leading-[.95] font-bold mb-6">Pedí en tu valle.<br><span class="text-lime-700">Recibilo con Va!</span></h1>
+          <p class="uppercase tracking-[.24em] text-sm text-[#9DB307] font-semibold mb-4">De Punilla, para Punilla</p>
+          <h1 class="title text-5xl sm:text-6xl lg:text-7xl leading-[.92] font-bold mb-6">Pedí en tu valle.<br><span class="text-[#9DB307]">Recibilo con Va!</span></h1>
           <p class="text-lg text-slate-700 mb-8 max-w-xl">Conectamos comercios, clientes y cadetes en todo el Valle de Punilla con una experiencia rápida, cercana y local.</p>
-          <div class="flex gap-4">
-            <a href="clientes.html" class="bg-slate-900 text-white px-7 py-3 rounded-full font-semibold hover:bg-slate-700 transition">Soy cliente</a>
-            <a href="comercios.html" class="border border-slate-300 px-7 py-3 rounded-full font-semibold hover:bg-white transition">Tengo comercio</a>
-          </div>
+          <div class="flex flex-wrap gap-4"><a href="clientes.html" class="btn-main bg-slate-900 text-white px-7 py-3 rounded-full font-semibold hover:bg-slate-700">Soy cliente</a><a href="comercios.html" class="btn-main border border-slate-300 px-7 py-3 rounded-full font-semibold hover:bg-white">Tengo comercio</a></div>
         </div>
         <div class="relative">
-          <img src="https://i.imgur.com/8Mupk8h.jpeg" alt="Repartidora Va! en Punilla" class="w-full h-[640px] object-cover rounded-[2rem] va-shadow"/>
+          <img src="assets/hero/hero-va-punilla.svg" alt="Paisaje del Valle de Punilla de referencia para hero de Va!" class="w-full h-[580px] sm:h-[640px] object-cover rounded-[2rem] va-shadow"/>
           <div class="absolute bottom-6 left-6 glass rounded-2xl px-5 py-4">
             <p class="title text-3xl font-bold">¿Lo pedís? Va!</p>
-            <p class="text-sm text-slate-700">Delivery local con identidad de Punilla.</p>
+            <p class="text-sm text-slate-700">Diseño desktop-first inspirado en la referencia visual.</p>
           </div>
         </div>
       </section>
-
-      <section class="mx-auto max-w-[1240px] px-4 mt-10 grid md:grid-cols-3 gap-6">
+      <section class="mx-auto max-w-[1240px] px-4 mt-12 grid md:grid-cols-3 gap-6">
         <article class="bg-white rounded-3xl p-7 va-shadow hover-float"><h3 class="title text-3xl mb-2">Comercios</h3><p>Sumá ventas y llegá más lejos en tu zona.</p></article>
         <article class="bg-white rounded-3xl p-7 va-shadow hover-float"><h3 class="title text-3xl mb-2">Cadetería</h3><p>Flexibilidad para trabajar en tu propio ritmo.</p></article>
         <article class="bg-white rounded-3xl p-7 va-shadow hover-float"><h3 class="title text-3xl mb-2">Clientes</h3><p>Todo lo que necesitás, desde tu barrio y al instante.</p></article>
       </section>
+
     </main>
+
+    <footer class="mt-6 pb-10">
+      <div class="mx-auto max-w-[1240px] px-4">
+        <div class="bg-slate-900 text-slate-200 rounded-3xl p-8 md:p-10">
+          <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <p class="title text-5xl text-[#C6D93B]">Va!</p>
+              <p class="mt-3 text-slate-300 max-w-xl">Delivery local del Valle de Punilla para clientes, comercios y cadetes.</p>
+            </div>
+            <div class="flex flex-wrap gap-x-5 gap-y-3 text-sm">
+              <a href="index.html" class="hover:text-[#C6D93B]">Inicio</a><a href="como_funciona.html" class="hover:text-[#C6D93B]">Cómo funciona</a><a href="comercios.html" class="hover:text-[#C6D93B]">Comercios</a><a href="cadeteria.html" class="hover:text-[#C6D93B]">Cadetería</a><a href="clientes.html" class="hover:text-[#C6D93B]">Clientes</a><a href="preguntas_frecuentes.html" class="hover:text-[#C6D93B]">FAQ</a><a href="contacto.html" class="hover:text-[#C6D93B]">Contacto</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
